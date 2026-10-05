@@ -2,7 +2,6 @@ plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
     id("org.jetbrains.kotlin.kapt")
-    id("org.jetbrains.kotlin.plugin.compose")
 }
 
 android {
@@ -24,10 +23,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility = 
-JavaVersion.VERSION_17
-        targetCompatibility = 
-JavaVersion.VERSION_17
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
 
     kotlinOptions {
@@ -39,10 +36,13 @@ JavaVersion.VERSION_17
         buildConfig = true
     }
 
+    composeOptions {
+        kotlinCompilerExtensionVersion = "1.5.15"
+    }
+
     packaging {
         resources {
-            excludes += 
-"/META-INF/{AL2.0,LGPL2.1}"
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
         }
     }
 }
