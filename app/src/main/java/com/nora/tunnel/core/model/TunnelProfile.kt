@@ -1,4 +1,7 @@
-yKey
+package com.nora.tunnel.core.model
+
+import androidx.room.Entity
+import androidx.room.PrimaryKey
 
 @Entity(tableName = "profiles")
 data class TunnelProfile(
